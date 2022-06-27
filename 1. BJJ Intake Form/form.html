@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="intro">
+      <h1 id="title">BJJ Intake Form</h1>
+      <p id="description">More than just a martial arts gym, we are a fun, positive and encouraging community dedicated to helping people reach their goals.  We believe in working hard to help you be the best you can be on and off of the mats.</p>
+      <p>
+      Tell us about your BJJ experience so we can make sure you're a fit for our tribe.
+      </p>
+    </div>
+    <form id="survey-form">
+      <div class="contact-info">
+        <h2>Contact Info</h2>
+        <label id="name-label" for="name" class="title">Name</label>
+        <input id="name" type="text" style="width: 25em;" placeholder="Please enter your name" required />   
+    
+        <label id="email-label" class="title">Email</label>
+        <input id="email" type="email" style="width: 25em;" min-length="8" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" placeholder="Please enter your email" required />
+    
+        <label id="number-label" class="title">Age (optional)</label>
+        <input id="number" type="number" style="width: 25em;" pattern="\d*" min="13" max="120" placeholder="Please enter your age (optional)" />
+
+        <label id="roll-before" class="title">Your preferred method of contact?</label>
+        <label><input type="radio" value="text" name="contact" checked /> Text</label>
+        <label><input type="radio" value="email" name="contact"  /> Email</label>
+        <label><input type="radio" value="phone" name="contact"  /> Phone</label>
+      </div>    
+   
+      <div class="experience">
+        <h2>What is Your Experience Level?</h2>
+        <label id="bjj-level" class="title">Your BJJ level</label>
+        <select id="dropdown">
+        <option value="">--Please choose your level--</option>
+        <option value="white-belt">White Belt (Beginner)</option>
+        <option value="blue-belt">Blue Belt (Advanced)</option>
+        <option value="purple-belt">Purple Belt</option>
+        <option value="brown-belt">Brown Belt</option>
+        </select>     
+    
+        <label id="other-martial-arts" class="title">Have you trained other martial arts?</label>
+        <label><input type="checkbox" value="judo" /> Judo</label>
+        <label><input type="checkbox" value="karate" /> Karate</label>
+        <label><input type="checkbox" value="kungfu" /> Kung-Fu</label>
+        <label><input type="checkbox" value="muaythai" /> Muay Thai</label>
+    
+        <label class="title">Why do you want to train BJ?</label>
+        <textarea id="story" name="story"rows="5" cols="33"></textarea>
+      </div>
+    
+      <button id="submit">Submit</button>
+
+    </form>
+  </body>
+</html>
